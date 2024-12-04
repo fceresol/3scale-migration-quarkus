@@ -341,6 +341,7 @@ public abstract interface AbstractThreescaleClient {
             @FormParam("cost_per_month") Float cost_per_month,
             @FormParam("setup_fee") Float setup_fee,
             @FormParam("trial_period_days") Integer trial_period_days,
+            @FormParam("system_name") String system_name,
             @FormParam("state_event") String state_event);
 
     @PUT

@@ -266,7 +266,7 @@ public class ConfigLoader {
 
     private List<ServiceBackendUsageWrapper> loadBackendUsages(int serviceID) {
         RestResponse<List<ServiceBackendUsageWrapper>> response = this.client.getServiceBackendUsages(apiToken, serviceID);
-        System.out.println(response.toResponse().toString());
+        //System.out.println(response.toResponse().toString());
         return response.getEntity();
 
     }

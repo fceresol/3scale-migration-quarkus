@@ -289,6 +289,7 @@ public class ObjectMerger {
                     plan.getCost_per_month(),
                     plan.getSetup_fee(),
                     plan.getTrial_period_days(),
+                    plan.getSystem_name(),
                     plan.getState()
             );
             ApplicationPlan destPlan = appw.getEntity().getApplication_plan();
