@@ -286,13 +286,15 @@ public class ObjectMerger {
                     config.importToken(),
                     service.getId(),
                     plan.getName(),
-                    plan.isApproval_required(),
-                    plan.getCost_per_month(),
-                    plan.getSetup_fee(),
-                    plan.getTrial_period_days(),
                     plan.getSystem_name(),
                     state_event
             );
+                   /* 
+                    plan.isApproval_required(),
+                    plan.getCost_per_month(),
+                    plan.getSetup_fee(),
+                    plan.getTrial_period_days(),*/
+                    
             ApplicationPlan destPlan = appw.getEntity().getApplication_plan();
 
             if (plan.isDefault()) {
