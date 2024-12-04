@@ -281,6 +281,7 @@ public class ObjectMerger {
 
         Log.info("create Service ApplicationPlan: " + sourceService.getName());
         for (ApplicationPlan plan : sourceService.getPlans()) {
+            String state_event= plan.getState().equals("hidden") ? "hide":"publish";
             RestResponse<ApplicationPlanWrapper> appw = this.destCLient.createServiceApplicationPlans(
                     config.importToken(),
                     service.getId(),
@@ -290,7 +291,7 @@ public class ObjectMerger {
                     plan.getSetup_fee(),
                     plan.getTrial_period_days(),
                     plan.getSystem_name(),
-                    plan.getState()
+                    state_event
             );
             ApplicationPlan destPlan = appw.getEntity().getApplication_plan();
 
