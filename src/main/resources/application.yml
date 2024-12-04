@@ -1,11 +1,11 @@
 quarkus:
   rest-client:
     com.redhat.fceresol.threescale.api.clients.SourceThreescaleClient:
-      url: https://3scale-all-admin.apps.lab01.gpslab.club
+      url: <source 3scale admin url>
       scope: jakarta.inject.Singleton
       verify-host: false
     com.redhat.fceresol.threescale.api.clients.DestThreescaleClient:
-      url: https://3scale-dev-admin.apps.lab01.gpslab.club
+      url: <dest 3scale admin url>
       scope: jakarta.inject.Singleton
       verify-host: false
     logging:
@@ -15,8 +15,8 @@ quarkus:
   log:
     level: INFO
 threescale:
-  exportToken: bcc3458a321bc0de68ae9e9c6807a3457bd7ba2d35831741a91434d9d25ad8e7
-  importToken: ee78ab54072617ec4e0ef980fced1d5a1a3b9d45ecdbdadc2465d35ad10a5402
+  exportToken: <source token>
+  importToken: <dest token>
   proxyPromoteToProduction: false
   forceDeploymentOption: self_managed
   
