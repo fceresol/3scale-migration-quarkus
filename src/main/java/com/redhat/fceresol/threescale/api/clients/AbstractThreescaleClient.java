@@ -234,7 +234,7 @@ public abstract interface AbstractThreescaleClient {
     @POST
     @Path("/services/{service_id}/metrics.json")
     public RestResponse<ServiceMetricWrapper> createServiceMetric(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("friendly_name") String friendly_name,
             @FormParam("system_name") String ystem_name,
@@ -245,7 +245,7 @@ public abstract interface AbstractThreescaleClient {
     @POST
     @Path("/services/{service_id}/metrics/{metric_id}/methods.json")
     public RestResponse<ServiceMetricMethods> createServiceMetricMethods(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @PathParam("metric_id") Integer metric_id,
             @FormParam("friendly_name") String friendly_name,
@@ -257,7 +257,7 @@ public abstract interface AbstractThreescaleClient {
     @PATCH
     @Path("/services/{service_id}/proxy.json")
     public RestResponse<ProxyWrapper> updateServiceProxy(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("endpoint") String endpoint,
             @FormParam("credentials_location") String credentials_location,
@@ -286,7 +286,7 @@ public abstract interface AbstractThreescaleClient {
     @POST
     @Path("/services/{service_id}/proxy/deploy.json")
     public RestResponse<Proxy> deployServiceProxy(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id
     );
 
@@ -306,7 +306,7 @@ public abstract interface AbstractThreescaleClient {
     @PATCH
     @Path("/services/{service_id}/proxy/oidc_configuration.json")
     public RestResponse<ProxyOIDCConfigWrapper> updateServiceProxyOIDCConfigs(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("standard_flow_enabled") Boolean standard_flow_enabled,
             @FormParam("implicit_flow_enabled") Boolean implicit_flow_enabled,
@@ -317,7 +317,7 @@ public abstract interface AbstractThreescaleClient {
     @PUT
     @Path("/services/{service_id}/proxy/policies.json")
     public RestResponse<JsonObject> updateServiceProxyPolicies(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("policies_config") String policies_config
     );
@@ -325,7 +325,7 @@ public abstract interface AbstractThreescaleClient {
     @POST
     @Path("/services/{service_id}/backend_usages.json")
     public RestResponse<ServiceBackendUsageWrapper> createServiceBackendUsages(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("backend_api_id") Integer backend_api_id,
             @FormParam("path") String path
@@ -334,7 +334,7 @@ public abstract interface AbstractThreescaleClient {
     @POST
     @Path("/services/{service_id}/application_plans.json")
     public RestResponse<ApplicationPlanWrapper> createServiceApplicationPlans(
-            @QueryParam("access_token") String access_token,
+            @FormParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("name") String name,
            /* @FormParam("approval_required") Boolean approval_required,
