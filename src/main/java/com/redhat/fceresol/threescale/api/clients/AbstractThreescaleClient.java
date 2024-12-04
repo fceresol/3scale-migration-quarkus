@@ -337,10 +337,10 @@ public abstract interface AbstractThreescaleClient {
             @QueryParam("access_token") String access_token,
             @PathParam("service_id") Integer service_id,
             @FormParam("name") String name,
-            @FormParam("approval_required") Boolean approval_required,
+           /* @FormParam("approval_required") Boolean approval_required,
             @FormParam("cost_per_month") Float cost_per_month,
             @FormParam("setup_fee") Float setup_fee,
-            @FormParam("trial_period_days") Integer trial_period_days,
+            @FormParam("trial_period_days") Integer trial_period_days,*/
             @FormParam("system_name") String system_name,
             @FormParam("state_event") String state_event);
 
